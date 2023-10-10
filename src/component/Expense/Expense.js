@@ -1,7 +1,10 @@
-import ExpenseItem from './ExpenseItem'
+import ExpenseItem from '../Expense/ExpenseItem'
+import NewExpense from '../NewExpense/NewExpense';
 import './Expense.css'
-function Expense(props) {
+const Expense = (props)  => {
   return (
+    <div>
+    <NewExpense/>
     <div className="expense">
       <ExpenseItem
         title={props.item[0].title}
@@ -23,6 +26,7 @@ function Expense(props) {
         amount={props.item[3].amount}
         date={props.item[3].date}
       />
+    </div>
     </div>
   );
 }
